@@ -1,0 +1,434 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{BB8CD83E-84D7-407B-9713-95E6F08F46FA}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectName>QuickFast</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>$(SolutionDir)bin\$(Configuration)\$(Platform)\</OutDir>
+    <IntDir>obj\$(Platform)\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>$(SolutionDir)bin\$(Configuration)\$(Platform)\</OutDir>
+    <IntDir>obj\$(Platform)\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>$(SolutionDir)bin\$(Configuration)\$(Platform)\</OutDir>
+    <IntDir>obj\$(Platform)\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>$(SolutionDir)bin\$(Configuration)\$(Platform)\</OutDir>
+    <IntDir>obj\$(Platform)\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>QUICKFAST_BUILD_DLL;XERCES_STATIC_LIBRARY;WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>$(MSBuildProjectDirectory);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <TargetMachine>MachineX86</TargetMachine>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <AdditionalLibraryDirectories>
+      </AdditionalLibraryDirectories>
+      <AdditionalDependencies>xerces-c_3D.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PreprocessorDefinitions>QUICKFAST_BUILD_DLL;XERCES_STATIC_LIBRARY;WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>$(MSBuildProjectDirectory);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <AdditionalLibraryDirectories>
+      </AdditionalLibraryDirectories>
+      <AdditionalDependencies>xerces-c_3D.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>QUICKFAST_BUILD_DLL;WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <AdditionalIncludeDirectories>$(MSBuildProjectDirectory);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <TargetMachine>MachineX86</TargetMachine>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>
+      </AdditionalLibraryDirectories>
+      <AdditionalDependencies>xerces-c_3.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <PreprocessorDefinitions>QUICKFAST_BUILD_DLL;WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <AdditionalIncludeDirectories>$(MSBuildProjectDirectory);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>
+      </AdditionalLibraryDirectories>
+      <AdditionalDependencies>xerces-c_3.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="application\CommandArgParser.cpp" />
+    <ClCompile Include="application\DecoderConnection.cpp" />
+    <ClCompile Include="application\DNDecoderConnectionImpl.cpp" />
+    <ClCompile Include="codecs\BasePacketAssembler.cpp" />
+    <ClCompile Include="codecs\Context.cpp" />
+    <ClCompile Include="codecs\DataSource.cpp" />
+    <ClCompile Include="codecs\DataSourceBuffer.cpp" />
+    <ClCompile Include="codecs\DataSourceBufferedStream.cpp" />
+    <ClCompile Include="codecs\DataSourceStream.cpp" />
+    <ClCompile Include="codecs\DataSourceString.cpp" />
+    <ClCompile Include="codecs\Decoder.cpp" />
+    <ClCompile Include="codecs\DictionaryIndexer.cpp" />
+    <ClCompile Include="codecs\Encoder.cpp" />
+    <ClCompile Include="codecs\FastEncodedHeaderAnalyzer.cpp" />
+    <ClCompile Include="codecs\FieldInstruction.cpp" />
+    <ClCompile Include="codecs\FieldInstructionAscii.cpp" />
+    <ClCompile Include="codecs\FieldInstructionBlob.cpp" />
+    <ClCompile Include="codecs\FieldInstructionByteVector.cpp" />
+    <ClCompile Include="codecs\FieldInstructionDecimal.cpp" />
+    <ClCompile Include="codecs\FieldInstructionGroup.cpp" />
+    <ClCompile Include="codecs\FieldInstructionSequence.cpp" />
+    <ClCompile Include="codecs\FieldInstructionTemplateRef.cpp" />
+    <ClCompile Include="codecs\FieldInstructionUtf8.cpp" />
+    <ClCompile Include="codecs\FieldOp.cpp" />
+    <ClCompile Include="codecs\FieldOpConstant.cpp" />
+    <ClCompile Include="codecs\FieldOpCopy.cpp" />
+    <ClCompile Include="codecs\FieldOpDefault.cpp" />
+    <ClCompile Include="codecs\FieldOpDelta.cpp" />
+    <ClCompile Include="codecs\FieldOpIncrement.cpp" />
+    <ClCompile Include="codecs\FieldOpTail.cpp" />
+    <ClCompile Include="codecs\FixedSizeHeaderAnalyzer.cpp" />
+    <ClCompile Include="codecs\GenericMessageBuilder.cpp" />
+    <ClCompile Include="codecs\MessagePerPacketAssembler.cpp" />
+    <ClCompile Include="codecs\MulticastDecoder.cpp" />
+    <ClCompile Include="codecs\PacketSequencingAssembler.cpp" />
+    <ClCompile Include="codecs\PresenceMap.cpp" />
+    <ClCompile Include="codecs\SchemaElement.cpp" />
+    <ClCompile Include="codecs\SegmentBody.cpp" />
+    <ClCompile Include="codecs\SingleMessageConsumer.cpp" />
+    <ClCompile Include="codecs\StreamingAssembler.cpp" />
+    <ClCompile Include="codecs\Template.cpp" />
+    <ClCompile Include="codecs\TemplateRegistry.cpp" />
+    <ClCompile Include="codecs\XMLTemplateParser.cpp" />
+    <ClCompile Include="common\BitMap.cpp" />
+    <ClCompile Include="common\Decimal.cpp" />
+    <ClCompile Include="common\dllmain.cpp" />
+    <ClCompile Include="common\Profiler.cpp" />
+    <ClCompile Include="common\QuickFASTPch.cpp" />
+    <ClCompile Include="common\Types.cpp" />
+    <ClCompile Include="common\WorkingBuffer.cpp" />
+    <ClCompile Include="communication\AsioService.cpp" />
+    <ClCompile Include="communication\AsynchFileSender.cpp" />
+    <ClCompile Include="communication\AsynchSender.cpp" />
+    <ClCompile Include="communication\FileSender.cpp" />
+    <ClCompile Include="communication\MulticastReceiverHandle.cpp" />
+    <ClCompile Include="communication\PCapReader.cpp" />
+    <ClCompile Include="messages\Field.cpp" />
+    <ClCompile Include="messages\FieldAscii.cpp" />
+    <ClCompile Include="messages\FieldByteVector.cpp" />
+    <ClCompile Include="messages\FieldDecimal.cpp" />
+    <ClCompile Include="messages\FieldGroup.cpp" />
+    <ClCompile Include="messages\FieldIdentity.cpp" />
+    <ClCompile Include="messages\FieldInt16.cpp" />
+    <ClCompile Include="messages\FieldInt32.cpp" />
+    <ClCompile Include="messages\FieldInt64.cpp" />
+    <ClCompile Include="messages\FieldInt8.cpp" />
+    <ClCompile Include="messages\FieldSequence.cpp" />
+    <ClCompile Include="messages\FieldSet.cpp" />
+    <ClCompile Include="messages\FieldString.cpp" />
+    <ClCompile Include="messages\FieldUInt16.cpp" />
+    <ClCompile Include="messages\FieldUInt32.cpp" />
+    <ClCompile Include="messages\FieldUInt64.cpp" />
+    <ClCompile Include="messages\FieldUInt8.cpp" />
+    <ClCompile Include="messages\FieldUtf8.cpp" />
+    <ClCompile Include="messages\Message.cpp" />
+    <ClCompile Include="messages\MessageAccessor.cpp" />
+    <ClCompile Include="messages\MessageBuilder.cpp" />
+    <ClCompile Include="messages\MessageFormatter.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="application\CommandArgHandler.h" />
+    <ClInclude Include="application\CommandArgParser.h" />
+    <ClInclude Include="application\DecoderConfiguration.h" />
+    <ClInclude Include="application\DecoderConfiguration_fwd.h" />
+    <ClInclude Include="application\DecoderConnection.h" />
+    <ClInclude Include="application\DecoderConnection_fwd.h" />
+    <ClInclude Include="application\DNDecoderConnectionImpl.h" />
+    <ClInclude Include="application\DNDecoderConnectionImpl_fwd.h" />
+    <ClInclude Include="application\QuickFAST.h" />
+    <ClInclude Include="codecs\BasePacketAssembler.h" />
+    <ClInclude Include="codecs\BasePacketAssembler_fwd.h" />
+    <ClInclude Include="codecs\Context.h" />
+    <ClInclude Include="codecs\Context_fwd.h" />
+    <ClInclude Include="codecs\DataDestination.h" />
+    <ClInclude Include="codecs\DataDestinationString.h" />
+    <ClInclude Include="codecs\DataDestination_fwd.h" />
+    <ClInclude Include="codecs\DataSource.h" />
+    <ClInclude Include="codecs\DataSourceBuffer.h" />
+    <ClInclude Include="codecs\DataSourceBufferedStream.h" />
+    <ClInclude Include="codecs\DataSourceStream.h" />
+    <ClInclude Include="codecs\DataSourceString.h" />
+    <ClInclude Include="codecs\DataSource_fwd.h" />
+    <ClInclude Include="codecs\Decoder.h" />
+    <ClInclude Include="codecs\Decoder_fwd.h" />
+    <ClInclude Include="codecs\DictionaryIndexer.h" />
+    <ClInclude Include="codecs\DictionaryIndexer_fwd.h" />
+    <ClInclude Include="codecs\Encoder.h" />
+    <ClInclude Include="codecs\Encoder_fwd.h" />
+    <ClInclude Include="codecs\FastEncodedHeaderAnalyzer.h" />
+    <ClInclude Include="codecs\FieldInstruction.h" />
+    <ClInclude Include="codecs\FieldInstructionAscii.h" />
+    <ClInclude Include="codecs\FieldInstructionBlob.h" />
+    <ClInclude Include="codecs\FieldInstructionByteVector.h" />
+    <ClInclude Include="codecs\FieldInstructionDecimal.h" />
+    <ClInclude Include="codecs\FieldInstructionExponent.h" />
+    <ClInclude Include="codecs\FieldInstructionGroup.h" />
+    <ClInclude Include="codecs\FieldInstructionInt16.h" />
+    <ClInclude Include="codecs\FieldInstructionInt32.h" />
+    <ClInclude Include="codecs\FieldInstructionInt64.h" />
+    <ClInclude Include="codecs\FieldInstructionInt8.h" />
+    <ClInclude Include="codecs\FieldInstructionInteger.h" />
+    <ClInclude Include="codecs\FieldInstructionMantissa.h" />
+    <ClInclude Include="codecs\FieldInstructionSequence.h" />
+    <ClInclude Include="codecs\FieldInstructionTemplateRef.h" />
+    <ClInclude Include="codecs\FieldInstructionUInt16.h" />
+    <ClInclude Include="codecs\FieldInstructionUInt32.h" />
+    <ClInclude Include="codecs\FieldInstructionUInt64.h" />
+    <ClInclude Include="codecs\FieldInstructionUInt8.h" />
+    <ClInclude Include="codecs\FieldInstructionUtf8.h" />
+    <ClInclude Include="codecs\FieldInstruction_fwd.h" />
+    <ClInclude Include="codecs\FieldOp.h" />
+    <ClInclude Include="codecs\FieldOpConstant.h" />
+    <ClInclude Include="codecs\FieldOpCopy.h" />
+    <ClInclude Include="codecs\FieldOpDefault.h" />
+    <ClInclude Include="codecs\FieldOpDelta.h" />
+    <ClInclude Include="codecs\FieldOpIncrement.h" />
+    <ClInclude Include="codecs\FieldOpNop.h" />
+    <ClInclude Include="codecs\FieldOpTail.h" />
+    <ClInclude Include="codecs\FieldOp_fwd.h" />
+    <ClInclude Include="codecs\FixedSizeHeaderAnalyzer.h" />
+    <ClInclude Include="codecs\GenericMessageBuilder.h" />
+    <ClInclude Include="codecs\HeaderAnalyzer.h" />
+    <ClInclude Include="codecs\HeaderAnalyzer_fwd.h" />
+    <ClInclude Include="codecs\MessageConsumer.h" />
+    <ClInclude Include="codecs\MessageConsumer_fwd.h" />
+    <ClInclude Include="codecs\MessagePerPacketAssembler.h" />
+    <ClInclude Include="codecs\MessagePerPacketAssembler_fwd.h" />
+    <ClInclude Include="codecs\MulticastDecoder.h" />
+    <ClInclude Include="codecs\MulticastDecoder_fwd.h" />
+    <ClInclude Include="codecs\NoHeaderAnalyzer.h" />
+    <ClInclude Include="codecs\PacketSequencingAssembler.h" />
+    <ClInclude Include="codecs\PacketSequencingAssembler_fwd.h" />
+    <ClInclude Include="codecs\PresenceMap.h" />
+    <ClInclude Include="codecs\PresenceMap_fwd.h" />
+    <ClInclude Include="codecs\SchemaElement.h" />
+    <ClInclude Include="codecs\SchemaElement_fwd.h" />
+    <ClInclude Include="codecs\SegmentBody.h" />
+    <ClInclude Include="codecs\SegmentBody_fwd.h" />
+    <ClInclude Include="codecs\SingleMessageConsumer.h" />
+    <ClInclude Include="codecs\StreamingAssembler.h" />
+    <ClInclude Include="codecs\SynchronousDecoder.h" />
+    <ClInclude Include="codecs\Template.h" />
+    <ClInclude Include="codecs\TemplateRegistry.h" />
+    <ClInclude Include="codecs\TemplateRegistry_fwd.h" />
+    <ClInclude Include="codecs\Template_fwd.h" />
+    <ClInclude Include="codecs\XMLTemplateParser.h" />
+    <ClInclude Include="codecs\XMLTemplateParser_fwd.h" />
+    <ClInclude Include="common\AtomicCounter.h" />
+    <ClInclude Include="common\AtomicOps.h" />
+    <ClInclude Include="common\AtomicPointer.h" />
+    <ClInclude Include="common\BitMap.h" />
+    <ClInclude Include="common\ByteSwapper.h" />
+    <ClInclude Include="common\Constants.h" />
+    <ClInclude Include="common\Decimal.h" />
+    <ClInclude Include="common\Decimal_fwd.h" />
+    <ClInclude Include="common\Exceptions.h" />
+    <ClInclude Include="common\Logger.h" />
+    <ClInclude Include="common\Logger_fwd.h" />
+    <ClInclude Include="common\Profiler.h" />
+    <ClInclude Include="common\QuickFASTPch.h" />
+    <ClInclude Include="common\QuickFAST_Export.h" />
+    <ClInclude Include="common\StringBuffer.h" />
+    <ClInclude Include="common\Types.h" />
+    <ClInclude Include="common\Value.h" />
+    <ClInclude Include="common\Value_fwd.h" />
+    <ClInclude Include="common\Version.h" />
+    <ClInclude Include="common\WorkingBuffer.h" />
+    <ClInclude Include="communication\AsioService.h" />
+    <ClInclude Include="communication\AsioService_fwd.h" />
+    <ClInclude Include="communication\Assembler.h" />
+    <ClInclude Include="communication\Assembler_fwd.h" />
+    <ClInclude Include="communication\AsynchFileReceiver.h" />
+    <ClInclude Include="communication\AsynchFileReceiver_fwd.h" />
+    <ClInclude Include="communication\AsynchFileSender.h" />
+    <ClInclude Include="communication\AsynchFileSender_fwd.h" />
+    <ClInclude Include="communication\AsynchReceiver.h" />
+    <ClInclude Include="communication\AsynchReceiver_fwd.h" />
+    <ClInclude Include="communication\AsynchSender.h" />
+    <ClInclude Include="communication\AsynchSender_fwd.h" />
+    <ClInclude Include="communication\AtomicQueue.h" />
+    <ClInclude Include="communication\AtomicQueue_fwd.h" />
+    <ClInclude Include="communication\BufferedRawFileReceiver.h" />
+    <ClInclude Include="communication\BufferedRawFileReceiver_fwd.h" />
+    <ClInclude Include="communication\BufferQueue.h" />
+    <ClInclude Include="communication\BufferQueue_fwd.h" />
+    <ClInclude Include="communication\BufferReceiver.h" />
+    <ClInclude Include="communication\BufferReceiver_fwd.h" />
+    <ClInclude Include="communication\BufferRecycler.h" />
+    <ClInclude Include="communication\FileSender.h" />
+    <ClInclude Include="communication\FileSender_fwd.h" />
+    <ClInclude Include="communication\LinkedBuffer.h" />
+    <ClInclude Include="communication\LinkedBuffer_fwd.h" />
+    <ClInclude Include="communication\MulticastReceiver.h" />
+    <ClInclude Include="communication\MulticastReceiverHandle.h" />
+    <ClInclude Include="communication\MulticastReceiver_fwd.h" />
+    <ClInclude Include="communication\MulticastSender.h" />
+    <ClInclude Include="communication\MulticastSender_fwd.h" />
+    <ClInclude Include="communication\PCapFileReceiver.h" />
+    <ClInclude Include="communication\PCapFileReceiver_fwd.h" />
+    <ClInclude Include="communication\PCapReader.h" />
+    <ClInclude Include="communication\RawFileReceiver.h" />
+    <ClInclude Include="communication\RawFileReceiver_fwd.h" />
+    <ClInclude Include="communication\Receiver.h" />
+    <ClInclude Include="communication\Receiver_fwd.h" />
+    <ClInclude Include="communication\RecoveryFeed.h" />
+    <ClInclude Include="communication\RecoveryFeed_fwd.h" />
+    <ClInclude Include="communication\Sender.h" />
+    <ClInclude Include="communication\Sender_fwd.h" />
+    <ClInclude Include="communication\SingleServerBufferQueue.h" />
+    <ClInclude Include="communication\SingleServerBufferQueue_fwd.h" />
+    <ClInclude Include="communication\SynchReceiver.h" />
+    <ClInclude Include="communication\SynchReceiver_fwd.h" />
+    <ClInclude Include="communication\TCPReceiver.h" />
+    <ClInclude Include="communication\TCPReceiver_fwd.h" />
+    <ClInclude Include="messages\Field.h" />
+    <ClInclude Include="messages\FieldAscii.h" />
+    <ClInclude Include="messages\FieldByteVector.h" />
+    <ClInclude Include="messages\FieldDecimal.h" />
+    <ClInclude Include="messages\FieldGroup.h" />
+    <ClInclude Include="messages\FieldIdentity.h" />
+    <ClInclude Include="messages\FieldIdentity_fwd.h" />
+    <ClInclude Include="messages\FieldInt16.h" />
+    <ClInclude Include="messages\FieldInt32.h" />
+    <ClInclude Include="messages\FieldInt64.h" />
+    <ClInclude Include="messages\FieldInt8.h" />
+    <ClInclude Include="messages\FieldSequence.h" />
+    <ClInclude Include="messages\FieldSet.h" />
+    <ClInclude Include="messages\FieldSet_fwd.h" />
+    <ClInclude Include="messages\FieldString.h" />
+    <ClInclude Include="messages\FieldUInt16.h" />
+    <ClInclude Include="messages\FieldUInt32.h" />
+    <ClInclude Include="messages\FieldUInt64.h" />
+    <ClInclude Include="messages\FieldUInt8.h" />
+    <ClInclude Include="messages\FieldUtf8.h" />
+    <ClInclude Include="messages\Field_fwd.h" />
+    <ClInclude Include="messages\Group.h" />
+    <ClInclude Include="messages\Group_fwd.h" />
+    <ClInclude Include="messages\Message.h" />
+    <ClInclude Include="messages\MessageAccessor.h" />
+    <ClInclude Include="messages\MessageBuilder.h" />
+    <ClInclude Include="messages\MessageBuilder_fwd.h" />
+    <ClInclude Include="messages\MessageField.h" />
+    <ClInclude Include="messages\MessageField_fwd.h" />
+    <ClInclude Include="messages\MessageFormatter.h" />
+    <ClInclude Include="messages\Message_fwd.h" />
+    <ClInclude Include="messages\Sequence.h" />
+    <ClInclude Include="messages\Sequence_fwd.h" />
+    <ClInclude Include="messages\SequentialSingleValueBuilder.h" />
+    <ClInclude Include="messages\SingleValueBuilder.h" />
+    <ClInclude Include="messages\SpecialAccessors.h" />
+    <ClInclude Include="messages\ValueMessageBuilder.h" />
+    <ClInclude Include="messages\ValueMessageBuilder_fwd.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
